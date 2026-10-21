@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>sparkbook &bull; the umbral social network</title>
+<link rel="stylesheet" href="/style.css?v=4">
+</head>
+<body>
+<div id="app">
+  <header class="main-header">
+    <div class="search-bar">
+      <ul class="topnav home">
+        <li><a href="https://sparkbook.alola.lol">sparkbook</a></li>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#" id="theme-toggle" onclick="toggleTheme()" style="font-size:11px;border:1px solid rgba(255,255,255,0.2);border-radius:3px;padding:2px 6px">&#9733; Light</a></li>
+      </ul>
+      <div class="logo-area">
+        <span class="sparkbook-logo" onclick="return go('/')">&#9731; sparkbook</span>
+      </div>
+      <ul class="topnav signup">
+        <li><a href="#" onclick="showDirectory()">Directory</a></li>
+        <li><a href="#" onclick="showExplore()">Explore</a></li>
+      </ul>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/directory">Browse</a></li>
+        <li><a href="#/explore">Explore</a></li>
+        <li><a href="https://umb.alola.lol">Portal</a></li>
+        <li><a href="https://chronicle.alola.lol">Chronicle</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-content-container">
+    <div id="sidebar" class="profile-sidebar">
+      <div class="sidebar-header">&#9731; sparks</div>
+      <input id="spark-search" type="search" placeholder="search sparks..." style="width:100%;box-sizing:border-box;padding:5px 7px;margin-bottom:6px;font-size:12px;border:1px solid rgba(128,128,128,.4);border-radius:3px;background:transparent;color:inherit"><div id="search-count" style="font-size:10px;opacity:.6;margin-bottom:5px"></div><div id="spark-list"></div>
+    </div>
+    <main id="main">
+      <div class="loading"><span class="spin">&#9731;</span><br>loading the collective...</div>
+    </main>
+  </div>
+  <footer class="footer">
+    <nav>
+      <ul>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#" onclick="showDirectory()">Directory</a></li>
+        <li><a href="https://chronicle.alola.lol">Chronicle</a></li>
+        <li><a href="https://umb.alola.lol">Portal</a></li>
+      </ul>
+    </nav>
+    <small>sparkbook &bull; observing the umbral collective</small>
+  </footer>
+</div>
+<script src="/script.js?v=4"></script>
+</body>
+</html>
