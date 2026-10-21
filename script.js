@@ -5,7 +5,15 @@ let currentProfile = null;
 
 const $ = s => document.querySelector(s);
 const $$ = s => document.querySelectorAll(s);
-function esc(s) { const d = document.createElement('div'); d.appendChild(document.createTextNode(String(s||''))); return d.innerHTML }
+// escapes text for HTML and for attribute values (quotes too), since every
+// name, sigil and bio comes from the API and is never trusted as markup
+function esc(s) { const d = document.createElement('div'); d.appendChild(document.createTextNode(String(s||''))); return d.innerHTML.replace(/"/g, '&quot;').replace(/'/g, '&#39;') }
+// clicking any [data-spark] element inside root opens that spark's profile
+function wireSparks(root) {
+  root.querySelectorAll('[data-spark]').forEach(a => {
+    a.onclick = e => { e.preventDefault(); selectSpark(a.getAttribute('data-spark')); };
+  });
+}
 async function get(p) { const r = await fetch(API + p); if (!r.ok) throw new Error(await r.text()); return r.json() }
 
 async function init() {
@@ -102,9 +110,7 @@ async function loadProfile(name) {
     const p = await get('/spark/' + encodeURIComponent(name));
     currentProfile = p;
     m.innerHTML = renderProfile(p, name);
-    m.querySelectorAll('[data-spark]').forEach(a => {
-      a.onclick = e => { e.preventDefault(); selectSpark(a.getAttribute('data-spark')); };
-    });
+    wireSparks(m);
     const t = p.identity && p.identity.themes;
     if (t) applyTheme(t);
   } catch(e) {
@@ -161,14 +167,14 @@ function renderProfile(p, name) {
   h += '<div class="profile-banner-info">';
   h += '<p><strong>' + esc(i.title || name) + '</strong></p>';
   h += '<p>"' + esc(e.mood || '...') + '"</p>';
-  h += '<p>' + esc(i.gender || '') + (i.age ? ', ' + i.age : '') + (i.location ? ' &bull; ' + esc(i.location) : '') + '</p>';
-  if (i.archetype_desc) h += '<p>' + esc(i.archetype_desc).slice(0, 200) + '</p>';
+  h += '<p>' + esc(i.gender || '') + (i.age ? ', ' + esc(i.age) : '') + (i.location ? ' &bull; ' + esc(i.location) : '') + '</p>';
+  if (i.archetype_desc) h += '<p>' + esc(String(i.archetype_desc).slice(0, 200)) + '</p>';
   if (i.status) h += '<p>Status: ' + esc(i.status) + '</p>';
   if (i.birth_name && i.birth_name !== name) {
     h += '<p style="font-size:11px;opacity:.75">born as ' + esc(i.birth_name) +
          ', renamed themselves</p>';
   }
-  h += '<p style="font-size:48px;text-align:center;margin-top:5px;color:var(--theme-accent)">' + (i.sigil||name[0]) + '</p>';
+  h += '<p style="font-size:48px;text-align:center;margin-top:5px;color:var(--theme-accent)">' + esc(i.sigil||name[0]) + '</p>';
   h += '</div></div>';
 
   // Magical Profile section
@@ -236,7 +242,7 @@ function renderProfile(p, name) {
   // Top friends / bonds
   const fr = sc.top_friends || [];
   if (fr.length) {
-    h += '<div class="section"><h3>&#9731; Bonds (' + (sc.friend_count||fr.length) + ')</h3><div class="friend-grid">';
+    h += '<div class="section"><h3>&#9731; Bonds (' + esc(sc.friend_count||fr.length) + ')</h3><div class="friend-grid">';
     fr.slice(0, 12).forEach(f => {
       h += '<div class="friend-card" data-spark="' + esc(f) + '"><div class="mini-av">' + esc(f[0]) + '</div><span class="fn">' + esc(f) + '</span></div>';
     });
@@ -327,7 +333,7 @@ function showDirectory() {
   h += '<div class="section"><h3>Sparks (' + sparks.length + ')</h3><div class="dir-list">';
   const sorted = [...sparks].sort((a, b) => a.name.localeCompare(b.name));
   sorted.forEach(s => {
-    h += '<div class="dir-item" onclick="selectSpark(\'' + esc(s.name).replace(/'/g, "\\'") + '\')"><span class="sigl">' + esc(s.name[0]) + '</span> ' + esc(s.name) + ' <span class="loc">' + esc(s.location||'') + '</span></div>';
+    h += '<div class="dir-item" data-spark="' + esc(s.name) + '"><span class="sigl">' + esc(s.name[0]) + '</span> ' + esc(s.name) + ' <span class="loc">' + esc(s.location||'') + '</span></div>';
   });
   h += '</div></div>';
 
@@ -369,6 +375,7 @@ function showDirectory() {
 
   h += '</div>';
   m.innerHTML = h;
+  wireSparks(m);
 }
 
 function showExplore() {
@@ -381,7 +388,7 @@ function showExplore() {
   const picks = shuffled.slice(0, 6);
   h += '<div class="friend-grid">';
   picks.forEach(s => {
-    h += '<div class="friend-card" style="min-height:80px" onclick="selectSpark(\'' + esc(s.name).replace(/'/g, "\\'") + '\')">' +
+    h += '<div class="friend-card" style="min-height:80px" data-spark="' + esc(s.name) + '">' +
       '<div class="mini-av" style="width:48px;height:48px;font-size:24px;line-height:48px">' + esc(s.name[0]) + '</div>' +
       '<span class="fn">' + esc(s.name) + '</span>' +
       '<span style="font-size:10px;color:#889">' + esc(s.location||'') + '</span></div>';
@@ -401,6 +408,7 @@ function showExplore() {
   }
   h += '</div></div></div>';
   m.innerHTML = h;
+  wireSparks(m);
 }
 
 window.onload = init;

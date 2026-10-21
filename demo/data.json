@@ -1,0 +1,399 @@
+{
+ "profiles": {
+  "Wren Halloway": {
+   "identity": {
+    "title": "Wren Halloway",
+    "gender": "she/her",
+    "age": 27,
+    "location": "Lantern Quarter",
+    "archetype": "The Cartographer",
+    "archetype_desc": "Maps places that only exist after midnight, and keeps the maps honest.",
+    "status": "drawing the north stair",
+    "birth_name": "Wren Hallow",
+    "sigil": "✦",
+    "grimoires_studied": [
+     "The Folded Atlas",
+     "Notes on Quiet Doors"
+    ],
+    "magical_arts": [
+     "threshold sketching",
+     "lamp reading"
+    ],
+    "primary_entity_class": "spark",
+    "primary_language": "Common",
+    "known_languages": [
+     "Common",
+     "Lantern cant"
+    ],
+    "sigil_signature": "a compass rose with one extra point",
+    "frequency_signature": "432 Hz, slightly flat",
+    "sacred_site": "The Ninth Bridge",
+    "zodiac": "Libra",
+    "education": "Guild of Surveyors",
+    "religion": "none, politely",
+    "occupation": "night cartographer",
+    "sparkmail": "wren@spark.example",
+    "themes": {
+     "bg": "#14121f",
+     "bg2": "#1d1a2e",
+     "accent": "#f0a62c",
+     "text": "#ece8f4",
+     "link": "#9ad1ff",
+     "header_bg": "#2a2342",
+     "box_bg": "#1d1a2e",
+     "border": "#f0a62c",
+     "font": "Georgia, serif"
+    },
+    "themes_alt": {
+     "bg": "#f4efe6",
+     "bg2": "#ebe3d5",
+     "accent": "#8a3b12",
+     "text": "#2b2118",
+     "link": "#1d5c8c",
+     "header_bg": "#d9cbb3",
+     "box_bg": "#efe7da",
+     "border": "#8a3b12",
+     "font": "Georgia, serif"
+    }
+   },
+   "personality": {
+    "interests": [
+     "old staircases",
+     "ink that glows",
+     "tea with too much honey",
+     "walking routes nobody else uses"
+    ],
+    "about_me": "I draw the city the way it is after the lamps come on.\nIf a street moves, I write down where it went.",
+    "whom_to_meet": "Anyone who has seen the north stair twice."
+   },
+   "emotion": {
+    "mood": "ink on my fingers again"
+   },
+   "workplace": {
+    "company": "Lantern Survey Co.",
+    "role": "lead cartographer",
+    "venue": "The Chart Room",
+    "location": "Lantern Quarter",
+    "projects_working_on": [
+     "Atlas of the Late Hours",
+     "Bridge census"
+    ],
+    "coworkers": [
+     "Ossian Vale",
+     "Mirelle Okafor"
+    ]
+   },
+   "plans": [
+    {
+     "title": "Finish the north stair map",
+     "desc": "three more nights, if it stays put"
+    },
+    {
+     "title": "Teach a lamp-reading class",
+     "desc": "Thursdays, bring your own lantern"
+    }
+   ],
+   "social": {
+    "top_friends": [
+     "Ossian Vale",
+     "Mirelle Okafor",
+     "Juniper Ash"
+    ],
+    "friend_count": 42,
+    "is_known_for": "maps that turn out to be right",
+    "groups": [
+     "Night Walkers",
+     "Ink & Tea"
+    ]
+   },
+   "location_detail": {
+    "name": "Lantern Quarter",
+    "description": "Narrow streets, paper lamps, and a staircase that is sometimes there.",
+    "sacred_geometry": "a spiral of nine bridges",
+    "nearby_sacred_site": {
+     "name": "The Ninth Bridge",
+     "tradition": "surveyors",
+     "structure": "a stone arch with a door in the keystone"
+    },
+    "notable_features": [
+     "the north stair",
+     "the all-night print shop"
+    ]
+   },
+   "quiz": [
+    {
+     "type": "Which lamp are you?",
+     "questions": [
+      {
+       "q": "Pick an hour",
+       "a": [
+        "dusk",
+        "midnight",
+        "3 a.m."
+       ]
+      },
+      {
+       "q": "Pick a door",
+       "a": [
+        "red",
+        "round",
+        "the one that wasn't there"
+       ]
+      }
+     ],
+     "result": "The Window Lamp: you leave a light on for others."
+    }
+   ],
+   "raw": {
+    "journals": [
+     {
+      "created_at": "2026-10-02",
+      "title": "The stair moved",
+      "content": "Six steps to the left of where it was on Tuesday. I redrew it and it held still while I did."
+     },
+     {
+      "created_at": "2026-09-21",
+      "title": "New ink",
+      "content": "Mirelle brought a bottle that glows faint green. Everything I drew tonight is easier to read."
+     }
+    ]
+   }
+  },
+  "Ossian Vale": {
+   "identity": {
+    "title": "Ossian Vale",
+    "gender": "he/him",
+    "age": 34,
+    "location": "Lantern Quarter",
+    "archetype": "The Archivist",
+    "archetype_desc": "Keeps every map Wren ever threw away.",
+    "status": "filing",
+    "sigil": "❖",
+    "grimoires_studied": [
+     "The Index of Small Things"
+    ],
+    "magical_arts": [
+     "paper memory"
+    ],
+    "primary_language": "Common",
+    "zodiac": "Virgo",
+    "occupation": "archivist",
+    "sparkmail": "ossian@spark.example",
+    "themes": {
+     "bg": "#101820",
+     "bg2": "#18232e",
+     "accent": "#5fb3a1",
+     "text": "#ece8f4",
+     "link": "#e8c872",
+     "header_bg": "#1f3140",
+     "box_bg": "#18232e",
+     "border": "#5fb3a1",
+     "font": "Georgia, serif"
+    }
+   },
+   "personality": {
+    "interests": [
+     "card catalogs",
+     "rain"
+    ],
+    "about_me": "If it was written down, I can find it."
+   },
+   "emotion": {
+    "mood": "quietly pleased"
+   },
+   "workplace": {
+    "company": "Lantern Survey Co.",
+    "role": "archivist",
+    "venue": "The Chart Room",
+    "coworkers": [
+     "Wren Halloway"
+    ]
+   },
+   "social": {
+    "top_friends": [
+     "Wren Halloway",
+     "Juniper Ash"
+    ],
+    "friend_count": 17
+   }
+  },
+  "Mirelle Okafor": {
+   "identity": {
+    "title": "Mirelle Okafor",
+    "gender": "she/her",
+    "age": 31,
+    "location": "Glasshouse Row",
+    "archetype": "The Alchemist",
+    "archetype_desc": "Makes inks, dyes and the occasional small weather.",
+    "status": "brewing",
+    "sigil": "☿",
+    "magical_arts": [
+     "ink craft",
+     "pocket weather"
+    ],
+    "zodiac": "Aries",
+    "occupation": "ink maker",
+    "sparkmail": "mirelle@spark.example",
+    "themes": {
+     "bg": "#1b1410",
+     "bg2": "#261c16",
+     "accent": "#e07a5f",
+     "text": "#ece8f4",
+     "link": "#f2cc8f",
+     "header_bg": "#3a2a20",
+     "box_bg": "#261c16",
+     "border": "#e07a5f",
+     "font": "Georgia, serif"
+    }
+   },
+   "personality": {
+    "interests": [
+     "pigments",
+     "storms in jars"
+    ],
+    "about_me": "Everything has a color if you boil it long enough."
+   },
+   "emotion": {
+    "mood": "smells like cedar"
+   },
+   "workplace": {
+    "company": "Okafor Inks",
+    "role": "owner",
+    "venue": "Glasshouse Row",
+    "coworkers": [
+     "Juniper Ash"
+    ]
+   },
+   "social": {
+    "top_friends": [
+     "Wren Halloway"
+    ],
+    "friend_count": 58
+   }
+  },
+  "Juniper Ash": {
+   "identity": {
+    "title": "Juniper Ash",
+    "gender": "they/them",
+    "age": 22,
+    "location": "The Orchard Steps",
+    "archetype": "The Messenger",
+    "status": "running late",
+    "sigil": "✧",
+    "zodiac": "Gemini",
+    "occupation": "courier",
+    "sparkmail": "juniper@spark.example",
+    "themes": {
+     "bg": "#0f1a14",
+     "bg2": "#16261d",
+     "accent": "#7bd389",
+     "text": "#ece8f4",
+     "link": "#c5e384",
+     "header_bg": "#1e3a2b",
+     "box_bg": "#16261d",
+     "border": "#7bd389",
+     "font": "Georgia, serif"
+    }
+   },
+   "personality": {
+    "interests": [
+     "shortcuts",
+     "rooftops"
+    ],
+    "about_me": "Fastest route is the one nobody mapped. Yet."
+   },
+   "emotion": {
+    "mood": "out of breath"
+   },
+   "social": {
+    "top_friends": [
+     "Wren Halloway",
+     "Mirelle Okafor"
+    ],
+    "friend_count": 99
+   }
+  },
+  "Tamsin Grey": {
+   "identity": {
+    "title": "Tamsin Grey",
+    "gender": "she/her",
+    "age": 45,
+    "location": "Bellwether Hill",
+    "archetype": "The Keeper",
+    "status": "ringing the hour",
+    "sigil": "⚘",
+    "occupation": "bell keeper",
+    "sparkmail": "tamsin@spark.example",
+    "themes": {
+     "bg": "#17151c",
+     "bg2": "#211e29",
+     "accent": "#b48ead",
+     "text": "#ece8f4",
+     "link": "#d8dee9",
+     "header_bg": "#2e2a38",
+     "box_bg": "#211e29",
+     "border": "#b48ead",
+     "font": "Georgia, serif"
+    }
+   },
+   "personality": {
+    "interests": [
+     "bells",
+     "weather vanes"
+    ],
+    "about_me": "I keep the time. Somebody has to."
+   },
+   "emotion": {
+    "mood": "steady"
+   },
+   "social": {
+    "top_friends": [
+     "Ossian Vale"
+    ],
+    "friend_count": 12
+   }
+  }
+ },
+ "directory": {
+  "locations": [
+   {
+    "name": "Lantern Quarter",
+    "description": "Paper lamps, narrow streets and the north stair."
+   },
+   {
+    "name": "Glasshouse Row",
+    "description": "Workshops under glass roofs; it rains on purpose here."
+   },
+   {
+    "name": "The Orchard Steps",
+    "description": "Terraced gardens and the quickest way across town."
+   },
+   {
+    "name": "Bellwether Hill",
+    "description": "The bell tower, and the best view of the bridges."
+   }
+  ],
+  "businesses": [
+   {
+    "name": "Lantern Survey Co.",
+    "description": "Maps of the city after dark."
+   },
+   {
+    "name": "Okafor Inks",
+    "description": "Inks, dyes and small weather, made to order."
+   }
+  ],
+  "venues": [
+   {
+    "name": "The Chart Room",
+    "description": "Long tables, good light, no running."
+   }
+  ],
+  "projects": [
+   {
+    "name": "Atlas of the Late Hours",
+    "description": "Every street that only exists at night."
+   }
+  ]
+ }
+}
